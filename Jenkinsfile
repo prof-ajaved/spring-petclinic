@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
-                bat 'mvnw.cmd -B  -DskipTests deploy'
+                bat 'mvnw.cmd -B -DskipTests install'
             }
         }
     }
