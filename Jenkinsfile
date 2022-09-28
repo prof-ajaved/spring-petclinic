@@ -1,10 +1,13 @@
 pipeline {
     agent any
+    tools {
+        jdk('jdk17')
+    }
     
     stages {
         stage('Build') { 
             steps {
-                sh 'mvnw -B -DskipTests clean package' 
+                 bat 'mvnw.cmd -B -DskipTests clean package' 
             }
         }
     }
