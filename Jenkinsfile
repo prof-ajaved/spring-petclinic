@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
-                pwsh '.\\jenkins\\scripts\\deliver.ps1' 
+                powershell script: '.\\jenkins\\scripts\\deliver.ps1'
             }
         }
     }
