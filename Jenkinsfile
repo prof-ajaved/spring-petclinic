@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Deliver') { 
             steps {
-                powershell script: '.\\jenkins\\scripts\\deliver.ps1'
+                bat 'mvnw.cmd -B deploy'
             }
         }
     }
